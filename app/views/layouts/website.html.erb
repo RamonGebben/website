@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ra-Ge.NET</title>
+  <%= stylesheet_link_tag    "reset", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "clippy", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "website", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "jquery", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "clippy", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "website", "data-turbolinks-track" => true %>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <%= csrf_meta_tags %>
+</head>
+<body class="website">
+
+<script type="text/javascript">
+    clippy.load('Clippy', function(agent) {
+	agent.show();
+        agent.moveTo(800, 100);
+        agent.speak('Ra-Ge.NET uses cookies! By visiting this site you accept the cookies. Thank you!');
+        
+    });
+</script>
+
+
+<%= yield %>
+
+
+</body>
+</html>
